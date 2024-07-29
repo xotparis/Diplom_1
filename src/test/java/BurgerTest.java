@@ -50,9 +50,9 @@ public class BurgerTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {IngredientType.SAUCE, "Ketchup", 0.5f, IngredientType.FILLING, "Lettuce", 0.3f},
-                {IngredientType.SAUCE, "Mustard", 0.4f, IngredientType.FILLING, "Tomato", 0.7f},
-                {IngredientType.SAUCE, "Mayonnaise", 0.6f, IngredientType.FILLING, "Onion", 0.2f}
+                {IngredientType.SAUCE, "Ketchup", 0.5f, IngredientType.FILLING, "Jalapeno", 0.9f},
+                {IngredientType.SAUCE, "Mayonnaise", 0.4f, IngredientType.FILLING, "Cheese", 0.3f},
+                {IngredientType.SAUCE, "B-B-Q", 0.7f, IngredientType.FILLING, "Tomato", 0.8f}
         });
     }
 
@@ -101,10 +101,10 @@ public class BurgerTest {
 
     @Test
     public void testAddIngredient() {
-        Ingredient ingredient3 = new Ingredient(IngredientType.FILLING, "Bacon", 1.0f);
+        Ingredient ingredient3 = new Ingredient(IngredientType.FILLING, "Сhips", 1.0f);
         burger.addIngredient(ingredient3);
         assertEquals(3, burger.ingredients.size());
-        assertEquals("Bacon", burger.ingredients.get(2).getName());
+        assertEquals("Сhips", burger.ingredients.get(2).getName());
     }
 
     @Test

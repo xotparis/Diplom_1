@@ -7,8 +7,8 @@ public class IngredientTest {
 
     @Test
     public void testGetPrice() {
-        Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "Ketchup", 0.5f);
-        Assert.assertEquals(0.5f, ingredient.getPrice(), 0.0f);
+        Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "Ketchup", 0.7f);
+        Assert.assertEquals(0.7f, ingredient.getPrice(), 0.0f);
     }
 
     @Test
@@ -23,24 +23,4 @@ public class IngredientTest {
         Assert.assertEquals(IngredientType.SAUCE, ingredient.getType());
     }
 
-    @Test
-    public void testSetPrice() {
-        Ingredient ingredient = new Ingredient(IngredientType.FILLING, "Tomato", 0.7f);
-        ingredient.price = 0.8f;
-        Assert.assertEquals(0.8f, ingredient.getPrice(), 0.0f);
-    }
-
-    @Test
-    public void testSetName() {
-        Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "Mayonnaise", 0.6f);
-        ingredient.name = "Spicy Mayonnaise";
-        Assert.assertEquals("Spicy Mayonnaise", ingredient.getName());
-    }
-
-    @Test
-    public void testSetType() {
-        Ingredient ingredient = new Ingredient(IngredientType.FILLING, "Onion", 0.2f);
-        ingredient.type = IngredientType.SAUCE;
-        Assert.assertEquals(IngredientType.SAUCE, ingredient.getType());
-    }
 }

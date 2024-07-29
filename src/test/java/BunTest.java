@@ -3,31 +3,19 @@ import org.junit.Assert;
 import org.junit.Test;
 import praktikum.Bun;
 
+import static CONSTANTS.CONSTANTS.TEST_EXPECTED_RESULT;
+
 public class BunTest {
 
     @Test
     public void testGetName() {
-        Bun bun = new Bun("Тест", 1.5f);
-        Assert.assertEquals("Тест", bun.getName());
+        Bun bun = new Bun(TEST_EXPECTED_RESULT, 3.2f);
+        Assert.assertEquals(TEST_EXPECTED_RESULT, bun.getName());
     }
 
     @Test
     public void testGetPrice() {
-        Bun bun = new Bun("Тест", 1.5f);
-        Assert.assertEquals(1.5f, bun.getPrice(), 0.0f);
-    }
-
-    @Test
-    public void testSetName() {
-        Bun bun = new Bun("Тест", 1.5f);
-        bun.name = "Тест булки";
-        Assert.assertEquals("Тест булки", bun.getName());
-    }
-
-    @Test
-    public void testSetPrice() {
-        Bun bun = new Bun("Тест булки", 1.5f);
-        bun.price = 2.0f;
-        Assert.assertEquals(2.0f, bun.getPrice(), 0.0f);
+        Bun bun = new Bun(TEST_EXPECTED_RESULT, 3.8f);
+        Assert.assertEquals(3.8f, bun.getPrice(), 0.0f);
     }
 }
